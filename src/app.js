@@ -5,7 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 //to get directory path => console.log(__dirname); to get file path  => console.log(__filename);
 const app = express()
-
+const port = process.env.PORT || 3000 //either provided by heroku or localhost
 //use to define path for express config
 const directoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -81,6 +81,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log("Port is started")
+app.listen(port,()=>{
+    console.log("server is started upon "+ port)
 })
