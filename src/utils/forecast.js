@@ -13,7 +13,7 @@ const forecast = (latitude,longitude,callback)=>{
             callback(undefined,
                 // temperature: body.current.temperature,
                 // feelslike: body.current.feelslike
-                'Current Temperature is ' + body.current.temperature + ' but it feels like ' + body.current.feelslike
+                'Current Temperature is ' + body.current.temperature + ' but it feels like ' + body.current.feelslike + ' and the humidity is ' + body.current.humidity
             );
         }
     })
